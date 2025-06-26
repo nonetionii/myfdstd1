@@ -1,1 +1,142 @@
-หหกหกหกหกหกหก
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  
+
+  <style>
+  
+  
+		html, body {
+				margin: 0;
+				padding: 0;
+				font-family: 'IBM Plex Sans Thai', sans-serif;
+		} 
+		
+		.topbar {
+				position: sticky;
+				top: 0;
+				z-index: 999;
+				background-color: #333;
+				color: white;
+				padding: 4px 8px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 16px;
+		} 
+		
+		button {
+				background-color: #ffffff10;
+				color: #fff;
+				border: 1px solid #fff3;
+				padding: 6px 14px;
+				border-radius: 6px;
+				font-size: 14px;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				backdrop-filter: blur(4px);
+		}
+
+		button:hover {
+				background-color: #ffffff22;
+				border-color: #fff6;
+		}
+		
+		.topbar button {
+				padding: 4px 8px;
+				font-size: 14px;
+				cursor: pointer;
+		}
+		
+		button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				aspect-ratio: 1;
+				height: 25px;
+				width: 25px;
+				padding: 0;
+				border-radius: 6px;
+		}
+
+		button:hover {
+				background-color: #ffffff22;
+				border-color: #fff6;
+		}
+
+		.gallery {
+				padding: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+		}
+
+		.gallery a img {
+				transition: height 0.2s ease;
+		}	
+		
+		.album-desc {
+				text-align: center;
+				padding: 8px 16px 0 16px;
+				margin: 0;
+				font-size: 14px;
+		}
+		
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div><button onclick="history.back()">←</button></div>
+    <div>Gallery Photo</div>
+    <div><button onclick="toggleHeight()">🔍</button></div>
+  </div>
+  
+  
+<p class="album-desc">Gymnastika by PP Club</p>
+
+  <div class="gallery">	<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!-- start  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <ul>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-01_1.html" target="_blank">2025-06-01_1</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-01_2.html" target="_blank">2025-06-01_2</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-07.html" target="_blank">2025-06-07</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-08_1.html" target="_blank">2025-06-08_1</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-08_2.html" target="_blank">2025-06-08_2</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-08_3.html" target="_blank">2025-06-08_3</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-08_cat_gym.html" target="_blank">2025-06-08_Cat_Gym</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-08_cat_nana.html" target="_blank">2025-06-08_Cat_Nana</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-14.html" target="_blank">2025-06-14</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-15.html" target="_blank">2025-06-15</a></li>
+			<li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/2025-06-22.html " target="_blank">2025-06-22</a></li>
+</ul>
+												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  </div>
+
+  <script>
+    let isBig = false;
+
+    function toggleHeight() {
+      const imgs = document.querySelectorAll(".gallery img");
+      imgs.forEach(img => {
+        img.setAttribute("height", isBig ? "100" : "400");
+      });
+      isBig = !isBig;
+    }
+  </script>
+
+</body>
+</html>
