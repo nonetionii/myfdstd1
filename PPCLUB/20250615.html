@@ -31,6 +31,17 @@
 				font-size: 18px;
 		} 
 		
+		.topbar-left {
+				  display: flex;
+				  gap: 6px; /* ระยะห่างระหว่างปุ่ม */
+		}
+
+		.topbar-title {
+				  flex-grow: 1;
+				  text-align: center;
+				  font-weight: 500;
+		}
+		
 		button {
 				background-color: #ffffff10;
 				color: #fff;
@@ -93,12 +104,15 @@
 </head>
 <body>
 
-  <div class="topbar">
-    <div><button onclick="history.back()">←</button></div>
-    <div>2025.06.15</div>
-    <div><button onclick="toggleHeight()">🔍</button></div>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <button onclick="history.back()">←</button>
+    <button onclick="toggleHeight()">🔍</button>
   </div>
-  
+  <div class="topbar-title">2025.06.15</div>
+</div>  
+ 
   
 <p class="album-desc">Sunday, June 15, 2025 <br>Gymnastika by PP Club</p>
 
@@ -245,17 +259,22 @@
 												<!--  end   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
   </div>
 
-  <script>
-    let isBig = false;
 
-    function toggleHeight() {
-      const imgs = document.querySelectorAll(".gallery img");
-      imgs.forEach(img => {
-        img.setAttribute("height", isBig ? "100" : "400");
-      });
-      isBig = !isBig;
-    }
-  </script>
+<script>
+  const heights = [240, 500,60,120];
+  let current = 0;
+
+  function toggleHeight() {
+    const imgs = document.querySelectorAll(".gallery img");
+    const height = heights[current];
+
+    imgs.forEach(img => {
+      img.setAttribute("height", height);
+    });
+
+    current = (current + 1) % heights.length;
+  }
+</script>
 
 </body>
 </html>

@@ -31,6 +31,17 @@
 				font-size: 18px;
 		} 
 		
+		.topbar-left {
+				  display: flex;
+				  gap: 6px; /* ระยะห่างระหว่างปุ่ม */
+		}
+
+		.topbar-title {
+				  flex-grow: 1;
+				  text-align: center;
+				  font-weight: 500;
+		}
+		
 		button {
 				background-color: #ffffff10;
 				color: #fff;
@@ -92,12 +103,13 @@
   </style>
 </head>
 <body>
-
-  <div class="topbar">
-    <div><button onclick="history.back()">←</button></div>
-    <div>2025.06.08 (1/3)</div>
-    <div><button onclick="toggleHeight()">🔍</button></div>
+<div class="topbar">
+  <div class="topbar-left">
+    <button onclick="history.back()">←</button>
+    <button onclick="toggleHeight()">🔍</button>
   </div>
+  <div class="topbar-title">2025.06.08 (1/3)</div>
+</div> 
   
   
 <p class="album-desc">Sunday, June 08, 2025 <br>Gymnastika by PP Club<br> [Part 1/3] </p>
