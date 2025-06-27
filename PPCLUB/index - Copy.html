@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'IBM Plex Sans Thai', sans-serif;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #333;
+      color: white;
+      padding: 4px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #ffffff10;
+      color: #fff;
+      border: 1px solid #fff3;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      height: 25px;
+      width: 25px;
+      padding: 0;
+    }
+
+    button:hover {
+      background-color: #ffffff22;
+      border-color: #fff6;
+    }
+
+    .gallery {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gallery a img {
+      transition: height 0.2s ease;
+    }
+
+    .album-desc {
+      text-align: center;
+      padding: 8px 16px 0 16px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .date-label::after {
+      content: " 📱";
+      display: none;
+    }
+
+    ul {
+      max-width: 500px;
+      margin: 24px auto;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    ul li {
+      list-style: none;
+      padding: 4px 0;
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        padding: 12px 16px;
+        font-size: 16px;
+      }
+
+      button {
+        height: 32px;
+        width: 32px;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+
+      .date-label::after {
+        display: inline;
+      }
+
+      ul {
+        font-size: 18px;
+      }
+    }
+	
+	
+	@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+    padding: 0 12px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  ul li a {
+    display: block;
+    padding: 12px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #0077cc;
+  }
+
+  ul li a:hover {
+    background-color: #e0e0e0;
+  }
+
+  .album-desc {
+    font-size: 16px;
+    padding: 12px 8px 0 8px;
+  }
+}
+
+
+.link-list {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-list a {
+  display: block;
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.link-list a:hover {
+  background-color: #e9ecef;
+}
+
+/* Responsive: ทำให้ลิงก์ใหญ่ขึ้นในมือถือ */
+@media (max-width: 600px) {
+  .link-list a {
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><button onclick="history.back()">←</button></div>
+  <div class="date-label">Gallery Photo</div>
+  <div><button onclick="toggleHeight()">🔍</button></div>
+</div>
+
+<p class="album-desc">Gymnastika by PP Club</p>
+<div class="link-list">
+<ul>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250601_1.html" target="_blank">2025-06-01_1</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250601_2.html" target="_blank">2025-06-01_2</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250607.html" target="_blank">2025-06-07</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250608_1.html" target="_blank">2025-06-08_1</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250608_2.html" target="_blank">2025-06-08_2</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250608_3.html" target="_blank">2025-06-08_3</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250608_cat_gym.html" target="_blank">2025-06-08_Cat_Gym</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250608_cat_nana.html" target="_blank">2025-06-08_Cat_Nana</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250614.html" target="_blank">2025-06-14</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250615.html" target="_blank">2025-06-15</a></li>
+  <li><a href="https://nonetionii.github.io/myfdstd1/PPCLUB/20250622.html" target="_blank">2025-06-22</a></li>
+</ul>
+</div>
+
+<div class="topbar">รวมอัลบั้ม</div>
+
+  <div class="album-grid">
+    <div class="album-card" onclick="location.href='gallery_20250622_peach.html'">
+      <img src="thumbs/20250622.jpg" alt="Gymnastika with p'Peach">
+      <div class="album-info">
+        <div class="album-title">2025.06.22 Gymnastika by PP Club with p'Peach</div>
+        <div class="album-desc">คำอธิบายว่า album นี้มีรูปเยอะมาก ถ่ายชัดๆ ทำร้อยรูป 555</div>
+      </div>
+    </div>
+
+    <div class="album-card" onclick="location.href='gallery_20250623_kkjjhh.html'">
+      <img src="thumbs/20250623.jpg" alt="Gymnastika with kkjjhh">
+      <div class="album-info">
+        <div class="album-title">2025.06.23 Gymnastika by PP Club with kkjjhh</div>
+        <div class="album-desc">คำอธิบายว่า album นี้มีรูปเยอะมาก ถ่ายชัดๆ ทำร้อยรูป 555</div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  let isBig = false;
+
+  function toggleHeight() {
+    const imgs = document.querySelectorAll(".gallery img");
+    imgs.forEach(img => {
+      img.setAttribute("height", isBig ? "100" : "400");
+    });
+    isBig = !isBig;
+  }
+</script>
+
+</body>
+</html>
